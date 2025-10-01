@@ -2,15 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('index', function () {
+    //return 'Hallo Laravel';
+    return view('index');
 });
-Route::get('/about', function () {
+Route::get('about', function () {
+    //return 'Ini adalah halaman <b>about</b>';
     return view('about');
 });
-Route::get('/home', function () {
-    return view('home');
+Route::get('mahasiswa', function () {
+    //return 'Ini adalah halaman <b>mahasiswa</b>';
+    return view('mahasiswa');
 });
-Route::get('/profil', function () {
-    return view('profil');
+Route::get('profil', function () {
+    //return 'Ini adalah halaman <b>profile</b>';
+    $nama = 'Dery';
+    //return view('profil', compact('nama'));
+    return view ('profil')->with ('nama', $nama);
 });
