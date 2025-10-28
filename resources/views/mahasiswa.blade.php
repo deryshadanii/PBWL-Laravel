@@ -41,6 +41,42 @@
 
   <div class="container" style="margin-left: 30px">
     <h1>Ini Halaman Mahasiswa</h1>
+
+    {{-- ROWSPAN = untuk menggabungkan baris
+    COLSPAN = untuk menggabungkan kolom
+    --}}
+
+    <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamin</th>
+          <th colspan="2">Tempat Tanggal Lahir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345</td>
+          <td>Dery Shadani</td>
+          <td>Laki-Laki</td>
+          <td>15 SEP 2004</td>
+          <td rowspan="3">Jl. Perjuangan</td>
+        </tr>
+        <tr>
+          <td>12346</td>
+          <td>Hafizh Fahriza</td>
+          <td>Laki-Laki</td>
+          <td>11 SEP 2005</td>
+        </tr>
+        <tr>
+          <td>12347</td>
+          <td>Rizky Putra</td>
+          <td>Laki-Laki</td>
+          <td>20 SEP 2005</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
