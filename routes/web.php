@@ -20,3 +20,12 @@ Route::get('profil', function () {
     //return view('profil', compact('nama'));
     return view ('profil')->with ('nama', $nama);
 });
+
+Route::get('array', function (){
+    //perulangan (loop)
+    $nilai_awal = 1;
+    while ($nilai_awal <= 5) {
+        echo 'Hallo Laravel ' .$nilai_awal . 'x<br>';
+        $nilai_awal++;
+    }
+});
