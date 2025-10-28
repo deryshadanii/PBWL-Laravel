@@ -46,32 +46,72 @@
     COLSPAN = untuk menggabungkan kolom
     --}}
 
-    <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
-      <thead>
-        <tr>
-          <th>NIM</th>
-          <th>Nama Mahasiswa</th>
-          <th>Jenis Kelamin</th>
-          <th colspan="2">Tempat Tanggal Lahir</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{-- menggunakan while --}}
-        <?php $nilai_awal = 0; ?>
-        @while ($nilai_awal < $jumlah)
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Tabel Mahasiswa</h4>
+        <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
+          <thead>
+            <tr>
+              <th>NIM</th>
+              <th>Nama Mahasiswa</th>
+              <th>Jenis Kelamin</th>
+              <th colspan="2">Tempat Tanggal Lahir</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{-- menggunakan while --}}
+            <?php $nilai_awal = 0; ?>
+            @while ($nilai_awal < $jumlah)
 
-          <tr>
-            <td>{{ $nim[$nilai_awal] }}</td>
-            <td>{{ $nama[$nilai_awal] }}</td>
-            <td>Laki-Laki</td>
-            <td>15 SEP 2004</td>
-            <td>Jl. Perjuangan</td>
-          </tr>
+              <tr>
+                <td>{{ $nim[$nilai_awal] }}</td>
+                <td>{{ $nama[$nilai_awal] }}</td>
+                <td>Laki-Laki</td>
+                <td>15 SEP 2004</td>
+                <td>Jl. Perjuangan</td>
+              </tr>
 
-          <?php  $nilai_awal++ ?>
-        @endwhile
-      </tbody>
-    </table>
+              <?php  $nilai_awal++ ?>
+            @endwhile
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-6">
+        <h4>Form Mahasiswa</h4>
+        <form action="" method="GET">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="">NIM Mahasiswa</label>
+              <input type="number" name="nim" class="form-control" placeholder="Masukan NIM">
+            </div>
+            <div class="col-sm-6">
+              <label for="">Nama Mahasiswa</label>
+              <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Masukan Nama">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="">Tanggal Lahir</label>
+              <input type="date" name="tgl_lahir" class="form-control">
+            </div>
+            <div class="col-sm-6">
+              <label for="">Program Studi</label>
+              <select name="prodi" class="form-control">
+                <option>Sistem Informasi </option>
+                <option>Ilmu Komputer </option>
+                <option>Matematika </option>
+              </select>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-12">
+              <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <hr>
 
     <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
