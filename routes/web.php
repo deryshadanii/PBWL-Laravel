@@ -28,4 +28,9 @@ Route::get('array', function (){
         echo 'Hallo Laravel ' .$nilai_awal . 'x<br>';
         $nilai_awal++;
     }
+    echo '<hr>';
+    //for
+    for ($i=1; $i <= 5 ; $i++) { 
+        echo 'Hello world ' . $i . 'x<br>';
+    }
 });
