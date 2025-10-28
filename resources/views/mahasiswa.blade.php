@@ -56,6 +56,7 @@
         </tr>
       </thead>
       <tbody>
+        {{-- menggunakan while --}}
         <?php $nilai_awal = 0; ?>
         @while ($nilai_awal < $jumlah)
 
@@ -71,6 +72,32 @@
         @endwhile
       </tbody>
     </table>
+    <hr>
+
+    <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamin</th>
+          <th colspan="2">Tempat Tanggal Lahir</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{-- menggunakan for --}}
+        @for ($i = 0; $i < $jumlah; $i++)
+          <tr>
+            <td>{{ $nim[$i] }}</td>
+            <td>{{ $nama[$i] }}</td>
+            <td>Laki-Laki</td>
+            <td>15 SEP 2004</td>
+            <td>Kota Medan</td>
+          </tr>
+        @endfor
+      </tbody>
+    </table>
+  </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
