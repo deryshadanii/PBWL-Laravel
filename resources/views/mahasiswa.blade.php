@@ -56,25 +56,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>12345</td>
-          <td>Dery Shadani</td>
-          <td>Laki-Laki</td>
-          <td>15 SEP 2004</td>
-          <td rowspan="3">Jl. Perjuangan</td>
-        </tr>
-        <tr>
-          <td>12346</td>
-          <td>Hafizh Fahriza</td>
-          <td>Laki-Laki</td>
-          <td>11 SEP 2005</td>
-        </tr>
-        <tr>
-          <td>12347</td>
-          <td>Rizky Putra</td>
-          <td>Laki-Laki</td>
-          <td>20 SEP 2005</td>
-        </tr>
+        <?php $nilai_awal = 0; ?>
+        @while ($nilai_awal < $jumlah)
+
+          <tr>
+            <td>{{ $nim[$nilai_awal] }}</td>
+            <td>{{ $nama[$nilai_awal] }}</td>
+            <td>Laki-Laki</td>
+            <td>15 SEP 2004</td>
+            <td>Jl. Perjuangan</td>
+          </tr>
+
+          <?php  $nilai_awal++ ?>
+        @endwhile
       </tbody>
     </table>
   </div>

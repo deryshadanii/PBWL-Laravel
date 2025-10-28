@@ -11,8 +11,10 @@ Route::get('about', function () {
     return view('about');
 });
 Route::get('mahasiswa', function () {
-    //return 'Ini adalah halaman <b>mahasiswa</b>';
-    return view('mahasiswa');
+    $nim = [123,124,125,126];
+    $nama = ['Jono', 'Juna', 'Joni', 'Jawa'];
+    $jumlah = count ($nim);
+    return view('mahasiswa', compact('nim', 'jumlah', 'nama'));
 });
 Route::get('profil', function () {
     //return 'Ini adalah halaman <b>profile</b>';
